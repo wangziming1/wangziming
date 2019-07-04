@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/vue.js"></script>
+    <title>Document</title>
+    <style>
+        .size{
+            font-size: 20px;
+        }
+        .italic{
+            font-style: italic
+        }
+        .red{
+            color: red;
+        }
+        .active{
+            letter-spacing: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 普通用法 -->
+        <!-- <h1 :class="['red','active']">我是一个超大的H1标签,嘿嘿嘿</h1> -->
+
+        <!-- 三元表达式 -->
+        <!-- <h1 :class="['italic',flag?'red':'']">我是一个超大的h1标签,嘿嘿嘿</h1> -->
+
+        <!-- 数组中嵌套对象 -->
+        <!-- <h1 :class="[{'italic':flag,'red':flag,'active':err,'size':err}]">我是一个超大的h1标签,嘿嘿嘿</h1> -->
+        <h1 :style="obj">我是一个超大的h1标签,嘿嘿嘿</h1>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                // flag:true,
+                // err:false
+                obj:{
+                    color: "red",
+                    "letter-spacing": "0.5em",
+                }
+            }
+        })
+    </script>
+</body>
+</html>

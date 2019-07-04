@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/vue.js"></script>
+    <title>Document</title>
+    <!-- <style>
+        input{
+            width: 100%;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="app">
+        <!-- v-model双向绑定,只能运用在表单元素中 -->
+        <!-- {{msg}} -->
+        <!-- <input type="text" v-model="msg"> -->
+        <!-- <textarea v-model="msg"></textarea> -->
+        
+            <!-- {{city}} -->
+        <!-- <select v-model="msg">
+            <option value="武汉">武汉</option>
+            <option value="成都">成都</option>
+            <option value="长沙">长沙</option>
+        </select> -->
+
+        <!-- <h1>{{gender}}</h1>
+        <input type="radio" value="男" name="gender" v-model="gender">男
+        <input type="radio" value="女" name="gender" v-model="gender">女 -->
+        <h1>{{hobby}}</h1>
+        <input type="checkbox" value="打游戏" name="hobby" v-model="hobby">打游戏
+        <input type="checkbox" value="吃饭" name="hobby" v-model="hobby">吃饭  
+        <input type="checkbox" value="睡觉" name="hobby" v-model="hobby">睡觉
+        
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                city:"城市",
+                gender:"男",
+                hobby:[
+                    "打游戏","吃饭","睡觉"
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

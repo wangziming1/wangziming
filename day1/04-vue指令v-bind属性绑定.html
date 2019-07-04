@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- b-bind的使用方法 -->
+        <!-- <input type="button" value="按钮" v-bind:title="title"> -->
+        <!-- 简写 -->
+        <input type="button" value="按钮" :title="title">
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                title:"你好我是title"
+            }
+        })
+    </script>
+</body>
+</html>

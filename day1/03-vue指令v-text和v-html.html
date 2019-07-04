@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-text = msg></p>
+        <!-- {{}}和v-text都不能解析html代码 只能当做字符串 -->
+        <p>{{ msg1 }}</p>
+        <!-- v-text的内容会覆盖标签里面的字符换 -->
+        <p v-text= msg1>111111111</p>
+        <!-- vue中有v-html属性可以解析html -->
+        <p v-html = msg1></p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"我是一只小小小鸟",
+                msg1:"<h1>我是h1标签</h1>"
+            }
+        })
+    </script>
+</body>
+</html>
